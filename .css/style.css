@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --teksti: #333333;
+    --tausta: #eeeeee;
+    --teksti-vaalea: #dddddd;
+    --bg-dark: #444444;
+    --highlight: #87af19;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*Yleistyylit*/
+/*Vertikaali keskitys*/
+.v-center {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/*Horisonttaali oikea*/
+.h-right {
+    position: absolute;
+    right: 0;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+.highlight {
+    color: var(--highlight);
+    display: inline-block;
+    transform: rotate(15deg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--tausta);
+    color: var(--teksti);
+}
+
+header {
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    border-bottom: var(--highlight) solid 5px;
+    padding: 10px;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+header .logo {
+    float:left;
+    font-size: 2em;
+}
+
+
+header nav a {
+    display: inline-block;
+    font-size: 1.5em;
+    color: var(--teksti-vaalea);
+    text-decoration: none;
+    padding: 20px 0.5em;
+}
+
+header nav a:hover{
+    color: var(--teksti);
+    background-color: var(--highlight);
+}
+
+.ingressi {
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+.ingressi::first-letter {
+    float: left;
+    font-size: 3.1em;
+    line-height: 1em;
+    font-weight: bold;
+    margin-right: 0.2em;
+}
+
+/* main-lohko tyylit */
+main {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    padding-top: 40px;
+}
+
+/* section-lohko tyylit */
+section {
+    max-width: 900px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+
+/* showcase-lohko tyylit */
+.showcase {
+    font-size: 1.6em;
+    padding-top: 50px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+/* Tarttee ehkä lisätyötä*/
+
+
+/* Ammattitaito tyylit*/
+.ammattitaito {
+    padding: 0;
+}
+
+.ammattitaito > li {
+    list-style-type: none;
+}
+
+.ammattitaito > li > ul {
+    border-left: var(--highlight) solid 5px;
+}
+
+.ammattitaito > li > ul li {
+    padding: 0;
+    list-style-type: square;
+}
+
+.table {
+    width: 70%;
+    max-width: 100%;    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabletitle {
+    font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/* Footer tyylit */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--teksti-vaalea);
+    padding: 40px 0;
+    text-align: center;
+    border-top: var(--highlight) solid 5px;
+}
+
+/* Mobiili tyylit */
+@media only screen and (max-width: 800px){    
+    /* 
+    Elementit allekkain
+     */  
+    header,
+    header > div.logo,
+    header > nav,
+    header nav a{
+        display: block;
+        float: none;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        clear: both;
+        position: relative;
+    }
+
+    header nav a {
+        padding: 5px 0;
+    }
+    
+    .v-center, h-right, .align-center {
+        display: block;
+        position: relative;
+        transform: none;
+    }
+
+    /* showcase-lohko tyylit */
+    .showcase {
+        font-size: 1.4em;
+        padding-top: 20px;
+        height: 150px;
+        margin: 20px auto;
+    }
+    /* main-lohko tyylit */
+    main {
+        font-size: 1.3em;
+        line-height: 1.2em;
+        padding-top: 40px;
+    }
+    .ingressi {
+        font-size: 1.0em;
+        font-style: italic;
+        line-height: 1.4em;
+    }
+
+    .ingressi::first-letter {
+        float: left;
+        font-size: 2.9em;
+        line-height: 1em;
+        font-weight: bold;
+        margin-right: 0.2em;
+    }
+    
+    section {
+        width: 100%;
+        max-width: 100%;    
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
